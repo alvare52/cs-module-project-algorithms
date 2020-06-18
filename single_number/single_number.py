@@ -4,8 +4,17 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    for i in range(0, len(arr)):
+        duplicate_count = 0
+        for j in range(0, len(arr)):
+            if arr[i] == arr[j]:
+                duplicate_count += 1
+        
+        if duplicate_count < 2:
+            return arr[i]
 
-    pass
+    # returns number that doesn't have duplicate
+    return -1
 
 
 if __name__ == '__main__':
