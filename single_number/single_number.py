@@ -4,18 +4,24 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
-    for i in range(0, len(arr)):
-        duplicate_count = 0
-        for j in range(0, len(arr)):
-            if arr[i] == arr[j]:
-                duplicate_count += 1
-        
-        if duplicate_count < 2:
-            return arr[i]
 
-    # returns number that doesn't have duplicate
+    cache = {}
+
+    for num in arr:
+
+        # if number isn't in cache, add it with 0 as value
+        if num not in cache:
+            cache[num] = 0
+
+        # if it is already in cache (duplicate), then +1
+        else:
+            cache[num] += 1
+    
+    # check if there's a key with a value of 0 (means no duplicate)
+    for key in cache:
+        if cache[key] == 0:
+            return key
     return -1
-
 
 if __name__ == '__main__':
     # Use the main function to test your implementation

@@ -7,6 +7,12 @@ def moving_zeroes(arr):
     # maybe loop once just to get future size of each list?
     non_zero_list = []
     zero_list = []
+    p1 = 0
+    p2 = 0
+    #move pointers closer together
+    #while p1 <= p2:
+        #check
+        #conditionals
     for num in arr:
         if num != 0:
             non_zero_list.append(num)

@@ -4,7 +4,7 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
-
+    # [0] * size
     product_list = [] # how to give size without filling up with zeroes?
     for i in range(0, len(arr)):
         print(f"i = {i}")
